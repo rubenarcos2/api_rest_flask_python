@@ -21,7 +21,9 @@ También se entregarán las instrucciones de creación de la base de datos.
 
 from flask import Flask, render_template, request, redirect
 import controlador_usuarios
+import logging
 
+logging.basicConfig(filename='log.log', level=logging.DEBUG)
 app = Flask(__name__)
 
 """
@@ -89,4 +91,4 @@ def actualizar_usuario():
 
 # Iniciar el servidor
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8000, debug=True)
+    app.run(host='0.0.0.0', port=8000, debug=False)
