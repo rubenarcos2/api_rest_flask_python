@@ -3,15 +3,10 @@ import pymysql
 
 def obtener_conexion():
     try:
-        # return pymysql.connect(host='localhost',
-        #                         user='root',
-        #                         password='',
-        #                         db='repositorios')
-        return pymysql.connect(
-                           host='db4free.net',
-                           user='sbd_tarea_24',
-                           password='sbd_tarea_2-4123456',
-                           db='sbd_tarea_24')
+        return pymysql.connect(host='localhost',
+                                    user='root',
+                                    password='',
+                                    db='repositorios')
     except pymysql.err.InternalError as e:
         print("Error interno del servidor", e)
         raise e
